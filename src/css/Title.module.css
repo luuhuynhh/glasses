@@ -1,0 +1,13 @@
+.title {
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+}

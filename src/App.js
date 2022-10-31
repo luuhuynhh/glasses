@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState, useEffect } from 'react';
+import GlassList from './components/GlassList';
+import Modal from './components/Modal';
+import Title from './components/Title';
+import style from "./css/App.module.css";
+import data from "./dataGlasses.json";
 function App() {
+  const [curIndex, setCurIndex] = useState(-1);
+  const [curGlass, setCurGlass] = useState('');
+
+  useEffect(() => {
+    setCurGlass(pre => data.filter(i => i.id === curIndex)[0]);
+  }, [curIndex]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.app}>
+      <Title />
+      <Modal glass={curGlass} />
+      <GlassList glassList={data} setCurIndex={setCurIndex} />
     </div>
-  );
+  )
 }
 
 export default App;

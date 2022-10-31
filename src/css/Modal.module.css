@@ -1,0 +1,41 @@
+.modal {
+    margin: 1rem;
+    width: 20%;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+}
+
+.productInf {
+    position: absolute;
+    bottom: 0;
+    padding-left: 1rem;
+    width: 100%;
+    border-bottom: 5px rgb(188, 127, 85, .5) solid;
+    background-color: rgb(254, 190, 144, .5);
+}
+
+.productInf h4 {
+    color: rgb(134 104 159);
+}
+
+.productInf p {
+    color: white;
+}
+
+.vGlass {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    width: 160px;
+    transform: translateX(-50%);
+}
